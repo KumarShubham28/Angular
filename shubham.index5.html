@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#result{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin-top: 50px;
+  }
+#style{
+
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+<div id="result">
+</div>
+<script>
+localStorage.getItem('imageStore');
+const imageStore= JSON. parse(localStorage.getItem('imageStore'));
+
+
+function Result(){
+for(let i=0;i< imageStore.length; i++){
+let img=document.createElement('img');
+  img.id="style";   
+img.src=imageStore[i];
+document.getElementById("result").append(img);
+}
+   }
+Result();
+
+
+</script>
+</body>
+</html>
